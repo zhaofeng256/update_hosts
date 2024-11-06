@@ -24,7 +24,7 @@ def get_ip(host):
 
                     text_ = i["acceptedAnswer"]["text"]
                     bs = BeautifulSoup(text_, "html.parser")
-                    ip_ul = bs.find_all("strong")
+                    ip_ul = bs.find_all("li")
                     ul = len(ip_ul)
                     ip_list = np.empty(shape=(ul, 2), dtype=object)
                     for li in range(ul):
